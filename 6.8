@@ -1,0 +1,9 @@
+n = int(input())
+lst = []
+for _ in range(n):
+    lst.append(int(input()))
+
+if check_increasing_or_decreasing(lst) or check_strictly_increasing_with_removal(lst):
+    print("True")
+else:
+    print("False")
