@@ -1,0 +1,7 @@
+
+
+user_input=int(input())
+result=0<user_input<100 and user_input%2==0
+print(result)
+
+ 
