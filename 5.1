@@ -1,0 +1,12 @@
+def find_common_characters(S1: str, S2: str, N: int) -> str:
+    # Create sets for each string
+    set_S1 = set(S1)
+    set_S2 = set(S2)
+
+    # Find the common characters
+    common_chars = sorted(set_S1 & set_S2)
+
+    # Select the first N characters
+    result = "".join(common_chars[:N])
+
+    return result
