@@ -1,0 +1,23 @@
+
+import sys
+
+def main():
+    try:
+        
+        maxcount = int(input())
+        
+        mincount = int(input())
+        c = maxcount // 2
+        if mincount > c:
+            print("IN")
+        else:
+            print("OUT")
+        return 0
+    except:
+        print("An error occurred. Please check your input and try again.")
+        return 1
+
+if __name__ == "__main__":
+    sys.exit(main())
+
+
