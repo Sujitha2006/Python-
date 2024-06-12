@@ -1,0 +1,24 @@
+def bubble_sort(arr):
+    n = len(arr)
+    swaps = 0
+    
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swaps += 1
+                
+    return swaps
+
+def print_sorted_info(arr):
+    swaps = bubble_sort(arr)
+    print("List is sorted in", swaps, "swaps.")
+    print("First Element:", arr[0])
+    print("Last Element:", arr[-1])
+
+# Sample Input
+n = int(input())
+arr = list(map(int, input().split()))
+
+# Call the function to print the sorted information
+print_sorted_info(arr)
