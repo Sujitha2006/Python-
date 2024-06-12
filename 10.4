@@ -1,0 +1,26 @@
+# Input
+n = int(input())
+arr = list(map(int, input().split()))
+
+# Call the function to sort the list using merge sort
+merge_sort(arr)
+
+# Output the sorted list
+print(*arr)
+
+def has_pair_with_sum(arr, k):
+    seen = set()
+    for num in arr:
+        complement = k - num
+        if complement in seen:
+            return "Yes"
+        seen.add(num)
+    return "No"
+
+# Input
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+
+# Call the function to check if there's a pair with the sum k
+print(has_pair_with_sum(arr, k))
