@@ -1,0 +1,8 @@
+def find_non_repeating(arr1, arr2):
+    unique_elements = set(arr1) ^ set(arr2)
+    non_repeating_elements = [elem for elem in unique_elements if arr1.count(elem) + arr2.count(elem) == 1]
+    if non_repeating_elements:
+        print(*non_repeating_elements)
+        print(len(non_repeating_elements))
+    else:
+        print("NO SUCH ELEMENTS")
