@@ -1,0 +1,12 @@
+n = int(input())
+nums = list(map(int, input().split()))
+k = int(input())
+
+result = count_unique_pairs_with_difference(nums, k)
+
+print(result)
+
+import math
+n = int(input())
+is_power_of_four = n > 0 and math.log(n, 4).is_integer()
+print(is_power_of_four)
