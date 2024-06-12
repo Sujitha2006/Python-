@@ -1,0 +1,34 @@
+def categorize_books(input_lines):
+    books_by_genre = {}
+
+    # Iterating over each input line
+    for entry in input_lines:
+        entry = entry.strip()
+        if not entry:
+            break
+
+        # Checking if the entry contains a colon
+        if ":" in entry:
+            genre, title = entry.split(": ")
+        else:
+            title, genre = entry.split(", ")
+        
+        # Check if the genre already exists in the dictionary
+        if genre in books_by_genre:
+            if title not in books_by_genre[genre]:
+                books_by_genre[genre].append(title)
+        else:
+            books_by_genre[genre] = [title]
+
+    # Outputting the categorized books
+    for genre in sorted(books_by_genre.keys()):
+        print(genre + ": " + ", ".join(sorted(books_by_genre[genre])))
+
+if _name_ == "_main_":
+    input_lines = [
+        "Introduction to Programming, Programming",
+        "Advanced Calculus, Mathematics",
+        "Programming: Introduction to Programming",
+        "Mathematics: Advanced Calculus",
+        "Fiction: Another World, Fictional Reality",
+        "Mathematics: 
